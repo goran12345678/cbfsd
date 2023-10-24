@@ -1,2 +1,0 @@
-This is the third step in the work flow
-User picks a product price
