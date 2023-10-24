@@ -1,0 +1,2 @@
+This is the second step in the work flow.
+The user picks a product
