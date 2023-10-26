@@ -1,2 +1,4 @@
+Changin for session example
+From a clone I make this change
 This is the second step in the work flow.
 The user picks a price
