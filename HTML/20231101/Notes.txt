@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Web Page</title>
+</head>
+
+<body >
+    <!----------------------------------------->
+    <!-- Learning the p tag -->
+    <!--
+    <h3>These paragraphs are important!</h3>
+    <p>HTML can make text look <b>interesting</b>!</p>
+    <p>There are <strong>many</strong> ways to draw attention.</p>
+    <p><i>We can make entire sentences stand out.</i></p>
+    <p>We do not want <strike><b><i><u>plain</u></i></b></strike> sentences.</p>
+    <br /> 
+    <p>This is a note at the <u>bottom</u>.</p>
+    <p>Another senetence to add.</p>
+
+
+    <h1>First header</h1>
+    <h2>Second header</h2>
+    <h3>Third header4</h3>
+    <h4>Fourth header</h4>-->
+    <!----------------------------------------->
+    <!-- Lists-->
+    <!-- Order List-->
+    <!--
+    <h3>Ordered List</h3>
+    <ol type="1">
+        <li value="1" title="This is the first"><b>First item</b></li>
+        <li>Second item</li>
+        <li>Third item</li>
+        <li>Fourth item
+            <ol type="a" hidden>
+                <li title="These are shoe selection size">Category A</li>
+                <li>Category B</li>
+            </ol>
+        </li>
+    </ol>
+-->
+    <!-- Unordered List -->
+    <!--
+    <h3>Unordered List</h3>
+    <ul style="background-color: red; list-style-type:disc;color: cornflowerblue;"> 
+        <li title="This is the first item">First item</li>
+        <li>Second item</li>
+        <li style="color:crimson">Third item
+            <ul style="color:chartreuse">
+                <li><a href="page2.html" target="_blank">Sub item</a</li>
+            </ul>
+        </li>
+    </ul>
+-->
+    <!-- Link or anchor tag-->
+
+    <!--<a href="page2.html" title="Special surprise if you click" target="_blank" alt="When things don't show">Click here..</a>--><!-- CTRL + Space --><!--../ is one level up -->
+    <!-- <img src="sleeping-grey-kitten-uhd-8k-wallpaper.jpg" height="250" alt="Sleeping Cat" title="Sleeping cat"/> -->
+<!--
+    <table style="background-color: beige; border: 1px solid black;">
+    <tr>
+        <th>First Name</th>
+        <th >Last Name</th>
+        <th >State</th>
+    </tr>
+    <tr>
+        <td style="border:1px dash grey; background-color: chartreuse;">Will</td><td>Smith</td><td>CO</td>
+    </tr>
+    <tr>
+        <td>Steve</td><td>Jones</td><td>IL</td>
+    </tr>
+    <tr>
+        <th scope="row">Totals:</th>
+        <td colspan="3"><b>2</b> People Total</td><td></td><td></td>
+    </tr>
+-->
+
+</table>
+
+</body>
+
+</html>
