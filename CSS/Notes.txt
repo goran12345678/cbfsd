@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Management</title>
+    <!--internal style-->
+    <style>
+        div {
+            margin-left: 20%;
+        }
+        /* group selector */
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+        /* id selector */
+        #container {
+            border: 1px dashed grey;
+            padding: 3px;
+            width: 350px;
+            background-color: lightgray;
+        }
+        /* tag selector */
+        input {
+            margin-bottom: 3px;
+        }
+        /* class selector */
+        .special{height: 25px;}
+
+        /* pseudo class selectors */
+        #link:hover {font-size: larger;}
+
+    </style>
+</head>
+
+<body>
+    <center>
+        <h2>New Client Information</h2>
+    </center>
+    <div id="container">
+        <!--inline style-->
+        <form action="#" method="post">
+            <input class="special" type="text" name="fname" placeholder="enter first name" required />
+            <label for="fname">First Name</label>
+            <br />
+            <input class="special" type="text" name="lname" placeholder="enter last name" required />
+            <label for="lname">Last Name</label>
+            <br />
+            <input class="special" type="email" name="email" placeholder="enter email" required />
+            <label for="email">Email</label>
+            <br />
+            <input list="states" name="state" id="browser" />
+            <label for="states">State</label>
+            <datalist id="states" name="states">
+                <option value="AZ">
+                <option value="IL">
+            </datalist>
+            <br />
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+
+    <div>
+        <a id="link" href="schedule.html" title="Schedule a meeting">Schedule Meeting</a>
+        <a href="www.google.com" title="Google">Google</a>
+    </div>
+
+    <!--
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        <tr>
+            <td>Tom</td>
+            <td>Jones</td>
+        </tr>
+    </table>
+-->
+</body>
+
+</html>
