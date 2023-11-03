@@ -1,0 +1,33 @@
+/* this covers all div tags in the body for examples*/
+div {
+    margin-left: 20%;
+}
+/* group selector */
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+/* this is the form container */
+/* id selector */
+.container {
+    border: 1px dashed grey;
+    padding: 3px;
+    width: 350px;
+    background-color: lightgray;
+}
+/* tag selector */
+input {
+    margin-bottom: 3px;
+}
+/* class selector */
+.special{height: 25px;}
+
+/* pseudo class selectors */
+#link:hover {font-size: larger;}
+
+/* descendant grouping */
+.container form {border: 1px solid red; border-radius: 5px;}
+
+.container form :last-child {height: 50px;}
