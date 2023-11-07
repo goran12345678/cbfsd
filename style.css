@@ -1,0 +1,28 @@
+.control{
+    border: 1px solid grey;
+    width: 250px;
+    padding: 3px;
+    color: red;
+}
+.control input {
+   margin-top: 3px;
+}
+.label{
+    color: blue;
+    width: 100%;
+}
+.input{margin-top: 10px;}
+#submit{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    margin-top: 5px; height: 50xp; font-size: x-large; 
+}
+.label{width: 250px;}
+.input{width: 250px;}
+form{
+    position: relative;
+    border: 1px solid red;
+    left: 100px;
+    top: 200px;
+}

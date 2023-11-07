@@ -1,0 +1,15 @@
+Form element
+
+Form Fields -> action path - > hand over the form data to the file
+
+key value pairs
+
+key:value  -> name:value -> form field name: user input value
+
+Browser developer console is accessible by using F12 in most browsers. The console is debugging tool for developing web applications.
+
+Client/Server Architecture.
+Client and Server (Live Server) are connect via network. Client and server communicate via network protocols (POST,GET,PUSH,DELETE).
+Client (index.html,form-handler.html) page and the server is Live Server. 
+Live Server (or any server) is bound to an IP address or domain name and port.
+127.0.0.1 local address
