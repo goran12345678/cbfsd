@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+
+        let greeting = 'hello everybody' //how do we create variable with string value
+        greeting = "another greeting"  // we are changing a variable with string value
+        /*alert(greeting)*/
+
+        let is_checked = false
+        is_checked = true //error and crashed
+        is_checked = "yes it is checked"
+        is_checked = true
+        is_checked = 0
+        //alert(is_checked)
+
+        let wheel = {
+            rim: "chrome", 
+            size: 22
+        }
+        let rim = wheel.rim
+        wheel.rim = "steel"
+        rim = wheel.rim
+
+        //alert(greeting)
+        //alert(wheel.size)
+
+
+        let arr = new Array()
+        arr.push("first item")
+        arr.push("second item")
+
+        //alert(arr.pop())
+        //push pop is a LIFO stat structure (Last In First Out)
+        arr.unshift("shift item")
+        //FIFO data structure or First In First Out 
+
+        //alert(arr)
+
+        let var1= "this is the first step"
+        //alert(var1)
+
+        var1 = "this is the first step"
+        //alert(var1)
+
+        var1 = "this is the second step"
+        //alert(var1)
+
+        const time_zone = "Arizona"
+        const page_title = "This is My Page"
+        const contact_email = "goran@gmail.com"
+
+        let date = new Date();
+        date.time_zone = time_zone;
+
+        //Operators
+        // Arithmetic Operator + , - , / , * , % , ++ , --
+        let math = 2 + 2
+        math = 2 - 2
+        math = 5 / 4
+        math = 5 * 4
+        math = 11 % 2
+        math = 5
+        //alert(math)
+        let incr = math++ //postfix increment operator
+        //alert(incr)
+        //alert(math)
+        incr = ++math  //prefix increment operator
+        //alert(incr)
+
+        //Assignment Operator =
+        let var2 = 10
+
+        //Comparison Operators < , > , <= , >= , == , === , !== , !===
+        let comp = 3 < 5
+        comp = 3 > 5
+        comp = 3 >= 3
+        comp =  4 == "3 + 1"
+        //comp = 4 === "4" //string equality operator compares data types as well as value
+        //alert(comp)
+
+        //Ternary 
+        // condition ? expression 1 : expression 2
+        //3 > 5 ? alert("yes it is true") : alert('not it is not true')
+
+        //Logic && (AND) , || (OR) , ! --negation operator
+        //9 > 5 && 5 > 3 ? alert("yes it is true") : alert('no it is not true')
+
+        //9 > 5 || 2 > 3 ? alert("yes it is true") : alert('no it is not true')
+
+        9 > 5 && !(2 > 3) ? alert("yes it is true") : alert('no it is not true')
+        
+
+
+     </script>
+</body>
+</html>
