@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let obj = { a: "item 1", b: "item 2", c: "item 3" }
+        let var2 = "this is a variable"
+        //alert(var2)
+        // Flow control 
+
+        //looping
+        //while loop and do while loop
+        //let arr = ["item 1","item 2","item 3"]
+        let x = 2
+        /*     while(x > 0)
+            {
+                //read an element in the array
+                x--
+            }  */
+        //console.log(x) 
+        /*      do{
+                console.log(x)
+                x++
+            }while(x < 5) */
+        //console.log(x) 
+
+        let file_line = 1
+        /*     do{
+                //read file
+                //read last line file_line = -1
+                file_line++
+            }while(x > 0) */
+        for (let i = 0; i < 4; i++) {
+            //console.log(i)
+        }
+        // for in, for on loops
+        // iterate is just repeating multiple times
+        // iterators are method tha call items in an array
+        let arr = ["item 1", "item 2", "item 3"]
+        for (const elem of arr) {
+            //takes items from an array
+            //console.log(elem)
+        }
+        //console.log(obj["a"]) //property accessor object[property_name]
+        for (const prop in obj) { // for in
+            //key value pairs
+             //console.log(prop)
+            //console.log(obj[prop])
+        }
+        // condition flow control
+        // if then else statement
+        let amount = 1000001
+        if (amount % 2 == 0) {
+            //console.log("the is no change to take into account")     
+        }
+        else if (amount < 100) {
+            //console.log("less than hundred gov regulation")
+        } else if (amount > 100) {
+            //console.log("great than 100 gov regulation")
+        }
+        else {
+            //console.log("needs further investigation")
+        }
+
+        //switch takes value and executes expressiones based on that value
+        let color = "red"
+        switch (color) {
+            case "red":
+                //console.log("red")
+                break
+            case "blue":
+                //console.log("blue")
+                break
+            case "black":
+                //console.log("black")
+                break
+        }
+        let car = { wheels: "chrome", tint: "date", windows: "automatic" }
+        for (const prop in car) { // for in
+            //key value pairs
+             //console.log(prop)
+             if(prop == "wheels"){
+                if(car[prop] === "steel"){
+                   // console.log("this car has chrome wheel")
+                    break
+                }
+             }
+            //console.log(obj[prop])
+        }
+
+        //Objects are entities and they have methods.
+        // Methods perform actions on objects
+        const user = {name : "Goran", email: "goran@gmail.com", state:"Arizona"}
+        for( let key of Object.keys(user)){
+            //console.log(key)
+        }
+        //immutability mutable is can change
+        let primtive = "this is a string" // variable with a value
+        //const user2 = user //object refere 
+        //console.log(user2.name)
+        //user.name = "Jerry"
+        //console.log(user2.name) //mutable references
+
+        //clone objects
+        //JSON is a JavScript object with methods to clone
+        const clone = JSON.parse(JSON.stringify(user))
+        //console.log(clone.name)
+        user.name = "Jerry"
+        //console.log(clone.name)
+
+
+        const truck = {wheels: 22, windows: "tinted", doors: "power"}
+        const test_obj = JSON.parse(JSON.stringify(truck))
+        //console.log(test_obj.wheels)
+        truck.wheels = 44 //object accessor
+       // console.log(test_obj.wheels)
+        //console.log(truck.wheels)
+        //pass test_obj of unit test
+
+        //Math
+        //Math.exp(), Math.floor(), Math.min(), Math.max(), Math.random()
+        //console.log(Math.round(Math.random() * 100)) //Las Vegas
+
+        //String
+        let person = "Marry"
+        //console.log(person + " Jones") //copncatenation
+
+        //Array
+        const arr3 = [1, 2, 3 ,4] //zero based arrays
+        //console.log(arr3[2])
+        //console.log(arr3.indexOf(2))
+
+        const p_arr = [{id: 1, name: "x"}, {id : 2, name : "y"}, {id : 3, name : "z"}]
+        let result_array = p_arr.filter(function(obj){
+             return obj.name === "x"
+        })
+        result_array = p_arr.findIndex((obj) => {
+            // arrow function or anonymous function
+            return obj.id === 3
+        })
+        result_array = p_arr.map((obj) => {
+           return obj.name = "Marvin"
+        })
+        result_array = p_arr.sort((obj, obj2) => {
+            if(obj.id > obj2.id){
+                return -1;
+            }
+            if(obj.id < obj2.id){
+                return 1
+            }
+            return 0
+        })
+        console.log(result_array)
+
+        //Functions
+
+    </script>
+
+</body>
+
+</html>
