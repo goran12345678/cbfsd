@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+        /*         
+        function sum(){
+            let a = 5
+            let b = 8
+            console.log("sum output", a + b)
+        }
+        sum() 
+        */
+        /* 
+        function sum(a, b){
+            let total = a + b
+            console.log("sum total", total)
+        }
+        sum(5, 8) 
+        */
+
+        /*         function sum(a,b){
+                    let total = a + b
+                    return total
+                }
+                console.log(sum(5,8))
+                let sum_var = sum(5,8)
+                console.log("new sum", sum_var) */
+
+        /*                 function sum(a, b){
+                            this.var1 = a //in the scope of the object
+                            this.var2 = b
+                            return this.var1 + this.var2
+                        }
+                        console.log(sum(5,8))
+                 */
+        /*                 function emialVerification(email){
+                            let i = email.indexOf("@")
+                            if(i > -1)
+                            return true
+                            else 
+                            return false
+                        }
+                        console.log("email verified",
+                         emialVerification("goran.gmail.com")) */
+
+        function submitClick() {
+            alert("subit has been clicked")
+        }
+        function changeColor() {
+            document.get
+        }
+        /*         function sum(){
+                    let a = 5
+                    let b = 8
+                    console.log("sum output", a + b)
+                }
+                sum() */
+        /*         function sum(a, b){
+                    let total = a + b
+                    console.log("sum total", total)
+                }
+                sum(5, 8) */
+
+        /*         function sum(a,b){
+                    let total = a + b
+                    return total
+                }
+                console.log(sum(5,8))
+                let sum_var = sum(5,8)
+                console.log("new sum", sum_var) */
+
+        /*                 function sum(a, b){
+                            this.var1 = a //in the scope of the object
+                            this.var2 = b
+                            return this.var1 + this.var2
+                        }
+                        console.log(sum(5,8))
+                 */
+        /*                 function emialVerification(email){
+                            let i = email.indexOf("@")
+                            if(i > -1)
+                            return true
+                            else 
+                            return false
+                        }
+                        console.log("email verified",
+                         emialVerification("goran.gmail.com")) */
+
+        /*     function changeColor(){
+                document.getElementById("submit").style.color = "red"
+            } */
+        /*     function changeColor(color){
+                document.getElementById("submit").style.color = color
+            } */
+        /*     function sendMessage(msg){
+                document.getElementById("message").innerHTML = "<b><u>New message</u>:</b> " + msg
+            } */
+        /*     function sendMessage(n, callback){
+                document.getElementById("message").innerHTML = callback(n)
+            }
+            function greeting(name){
+                 return "Hi my name is " + name
+            } */
+        function sum(a, b) {
+            let ttl
+            try {
+                ttl = a / b
+                //throw new Error('Parameter is not a number!')
+            } catch (e) {
+                console.log("there was an issue: ", e)
+            }
+            console.log("sum is", a + b)
+        }
+    </script>
+</head>
+
+<body>
+    <input id="submit" type="submit" value="click here" onclick="submitClick()" />
+    <!-- Event binding allows us to execute JS when specific events happen -->
+    <input id="submit" type="submit" value="click here" onclick="changeColor('yellow')" />
+    <!--
+<input id="submit2"  type="submit" value="send message" onclick="sendMessage('hi all')"/>
+-->
+    <input id="submit2" type="submit" value="send message" onclick="sendMessage('goran', greeting)" />
+    <div id="message">
+        Hi everbody
+    </div>
+    <script>
+        //sum(15,88)
+        const promise = new Promise((resolve, reject) => {
+            setTimeout(function () {
+                resolve("promise completed")
+            }, 5000)
+        })
+        promise
+            .then(result => {
+                console.log("promise result: " + result)
+            })
+            .catch(erro => {
+
+            })
+
+        console.log("the main execution flow is complete")
+    </script>
+</body>
+
+</html>
