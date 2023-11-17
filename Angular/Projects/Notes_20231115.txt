@@ -1,0 +1,23 @@
+Angular is framework for developing web applications.
+It has tools to write code, debug code, test code deploy code.
+
+Angular CLI - Command Line Interface
+
+Bootstrapping - Building something in a sequence driven on its own. Execute intial code, that code executed other code, that other code executes other code until the task is complete.
+
+MVC Architecteure - Model/View/Controller. A Controller manages data defined by a Model displayed within a View.  Data Biding
+
+install angular cli
+npm install -g @angular/cli@16.2.0
+
+check Angular cli version
+ng version
+
+create new project (only command that is run outside of the project directory)
+ng new <project-name>
+
+create a new component (must be run inside the project folder)
+ng generate component client
+
+run application
+ng serve

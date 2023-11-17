@@ -30,3 +30,7 @@ alert(client.getFullNName())
 
 //Modules
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 21b83a80fa99ee3628edc519e6beba82ff925509

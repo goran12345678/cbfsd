@@ -8,4 +8,8 @@ export class Client {
         this.email = email
     }
     getFullNName = function () { return this.first_name + " " + this.last_name }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 21b83a80fa99ee3628edc519e6beba82ff925509
