@@ -1,1 +1,15 @@
 <p>client works!</p>
+<h2>Hello all</h2>
+<p><u>Underline</u></p>
+<p>{{ msg + " concate" }}</p>
+<input type="button" value="click" (click)="showClick()"/>
+<textarea [disabled]="disabled">Doe we want to see this</textarea>
+<br/>
+Text: <input type="text" [value]="text" #textInput/>
+<input type="button" value="send" (click)="getText(textInput)" />
+<br />
+<br />
+<input type="text" [(ngModel)]="message" name="message" (click)="reset()" />This is the {{message}}
+
+
+
