@@ -1,0 +1,22 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "first_name": "Marry",
+      "last_name": "Jones",
+      "email": "mjones@gmail.com",
+      "phone": "520.333.5678",
+      "state": "",
+      "city": ""
+    },
+    {
+      "id": 2,
+      "first_name": "Tom",
+      "last_name": "Smith",
+      "email": "t.smith@gmail.com",
+      "phone": "1234",
+      "state": "",
+      "city": ""
+    }
+  ]
+}
