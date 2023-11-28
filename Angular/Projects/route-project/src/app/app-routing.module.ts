@@ -4,7 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { ClientComponent } from './client/client.component';
 
 const routes: Routes = [
-  {path:"home",component:HomeComponent},
+  {path:path:"home",component:HomeComponent},
   {path:"client",component:ClientComponent}
 ];
 
