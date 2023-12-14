@@ -44,13 +44,85 @@ public class Example {
 		//32<<4 32/4^2
 		
 		//AND Operator &&
-		int a = 9;
-		int b = 4;
-		int c = 19;
-		System.out.println(a>b && a>c);
+		//int a = 9;
+		//int b = 4;
+		//int c = 19;
+		//System.out.println(a>b && a>c);
 		
 		//OR Operator ||
-		System.out.println(a<b || a>c || 3>1);
+		//System.out.println(a<b || a>c || 3>1);
+		
+		//conditional statements
+		//If statement
+		/*
+		int x = 13;
+		int y = 12;
+		int z = 10;
+		if(x < y) {
+			System.out.println("The statement is true");
+		}
+		else if(z > y) {
+			System.out.println("execution else if");
+		}
+		else {//If else statement
+			System.out.println("execution of default");
+			if(z == 10) {
+				System.out.println("execution of z = 15");
+			}
+		}
+		
+		System.out.println("execution ended");
+		*/
+		/*
+		int x = 800;
+		//switch statement/
+		switch(x){
+		case 100: //if x is 100 run this code
+			System.out.println(x);
+			break;
+		case 200: //if x is 200 run this code
+			System.out.println(x);
+			break;
+		case 300: //if x is 300 run this code
+			System.out.println(x);
+			break;
+		default:
+			System.out.println("default");
+			break;
+		}
+		*/
+		System.out.println("execution ended");
+		
+		//Loops
+		//  1. Intialization
+		//  2. condition
+		//  3. Increment or decrement
+		//  4. Body
+		
+		//For loop
+		//for(int i=1; i<=10; i++) {
+		//	System.out.println(i);
+		//}
+		
+		//While loops
+		
+		//int i = 1;
+		//Infinite loop.
+		//while(i <= 10) {
+		//	System.out.println(i);
+		//	i++;
+		//}
+		
+		//Do_While loop
+		// ******1 iteration will always execute
+		int i = 1;
+		do {
+			System.out.println(i);
+			i++;
+		}while(i <= 10);
+		
+	
+		
 		
 		
 		
