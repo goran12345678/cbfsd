@@ -19,9 +19,19 @@ public class Functions {
 		//String test = "Hello there";
 		//int index = test.indexOf("o");
 		//System.out.println(index);
-		System.out.println(total("test"));
-		System.out.println(total(1,2));
-		System.out.println(total(1,2,3));
+		//System.out.println(total("test"));
+		//System.out.println(total(1,2));
+		//System.out.println(total(1,2,3));
+		MyCalculator calculator = new MyCalculator();
+		calculator.addNumbers(3, 5);
+		calculator.subtractNumbers(5, 3);
+		
+		int sum = calculator.multipleNumbers(3, 5);
+		System.out.println(sum);
+		calculator.decrementNumber(sum);
+		//calculator.showNumbers(7, 9);
+		
+		MyCalculator.showNumbers(7, 9);
 		
 	}
 	//camel case naming convention
