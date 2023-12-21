@@ -7,8 +7,12 @@ public class App {
 			MyThread thread = new MyThread();
 			Thread t1 = new Thread(thread);
 			t1.start();
+			System.out.println("t1.start() started");
 			
 			new MySecondThread().start();
+			System.out.println("MySecondThread started");
+			
+			System.out.println("Main execution has finished");
 	}
 
 }
@@ -18,7 +22,13 @@ class MyThread implements Runnable{
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		System.out.println("Out thread ran");
+		try {
+			Thread.sleep(4000l);
+			System.out.println("MyThread thread done");
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 	
@@ -27,7 +37,13 @@ class MySecondThread extends Thread{
 	
 	@Override
 	public void run() {
-		System.out.println("Second thread ran");
+		try {
+			Thread.sleep(6000l);
+			System.out.println("MySecondThread thread done");
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 	
 }
