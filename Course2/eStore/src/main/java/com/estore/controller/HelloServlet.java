@@ -3,6 +3,7 @@ package com.estore.controller;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -41,7 +42,14 @@ public class HelloServlet extends HttpServlet {
 		
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		out.print("<h3> " + msg + "</h3>");
+		
+		Cookie[] cookies = request.getCookies();
+		for(Cookie c: cookies) {
+			out.println("<b>Cookies</b><br />");
+			out.println("<p>" + c.getName() + " : " + c.getValue() + "<p>");
+		}
+		
+		//out.print("<h3> " + msg + "</h3>");
 		
 	}
 	
