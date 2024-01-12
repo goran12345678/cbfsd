@@ -10,6 +10,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import com.estore.db.MongoDB;
+
 /**
  * Servlet implementation class HelloServlet
  */
@@ -43,11 +45,13 @@ public class HelloServlet extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		
-		Cookie[] cookies = request.getCookies();
-		for(Cookie c: cookies) {
-			out.println("<b>Cookies</b><br />");
-			out.println("<p>" + c.getName() + " : " + c.getValue() + "<p>");
-		}
+		MongoDB db = new MongoDB();
+		
+		/*
+		 * Cookie[] cookies = request.getCookies(); for(Cookie c: cookies) {
+		 * out.println("<b>Cookies</b><br />"); out.println("<p>" + c.getName() + " : "
+		 * + c.getValue() + "<p>"); }
+		 */
 		
 		//out.print("<h3> " + msg + "</h3>");
 		

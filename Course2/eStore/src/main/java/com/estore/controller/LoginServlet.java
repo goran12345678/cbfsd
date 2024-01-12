@@ -6,6 +6,8 @@ import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -44,25 +46,43 @@ public class LoginServlet extends HttpServlet {
 		response.setContentType("text/html"); // HTTP header added
 		PrintWriter out = response.getWriter(); // the stream writer
 
-		/// System.out.print("User login: " + email + " " + password);
-		Cookie[] cookies = request.getCookies();
-		if (SessionManager.doesCookieExist(COOKIE_NAME, cookies)) {
-			out.println("<b>Your session is still valid</b>");
-		} else {
-			if (email.equals(EMAIL) && password.equals(PASSWSORD)) {
+		HttpSession session = request.getSession(); // storage specific to a client
 
-				Cookie cookie = new Cookie(COOKIE_NAME, email);
-				response.addCookie(cookie);
-			}
-			else {
+		if (session.getAttribute("user_email") == null) {
+			if (email.equals(EMAIL) && password.equals(PASSWSORD)) {
+				// valid login
+				session.setAttribute("user_email", email);
+				out.print("succesfull login");
 				
-				out.println("<b>incorrect login!</b>");
+			} else {
+				out.print("log failed");
 			}
+		}else {
+			
+			String user = "";
+			
+			if(session.getAttribute("user_email") != null) {
+				user = session.getAttribute("user_email").toString();
+			}
+			out.print("you are already logged in as " + user);
 		}
 
-		//String html = "<center><h3>Hello " + id + "</h3></center>";
+		/// System.out.print("User login: " + email + " " + password);
+		/*
+		 * Cookie[] cookies = request.getCookies(); if
+		 * (SessionManager.doesCookieExist(COOKIE_NAME, cookies)) {
+		 * out.println("<b>Your session is still valid</b>"); } else { if
+		 * (email.equals(EMAIL) && password.equals(PASSWSORD)) {
+		 * 
+		 * Cookie cookie = new Cookie(COOKIE_NAME, email); response.addCookie(cookie); }
+		 * else {
+		 * 
+		 * out.println("<b>incorrect login!</b>"); } }
+		 */
 
-		//out.print(html); // send message body to the browser. the message is html
+		// String html = "<center><h3>Hello " + id + "</h3></center>";
+
+		// out.print(html); // send message body to the browser. the message is html
 
 	}
 
