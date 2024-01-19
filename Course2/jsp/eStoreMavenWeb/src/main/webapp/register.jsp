@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
  
  <%@ page import="com.fullstack.model.User" %> 
- <%@ page import="com.fullstack.db.DB" %>  
   <%@ page import="com.fullstack.db.DB" %>  
    <%@ page import="java.sql.PreparedStatement" %>  
     
@@ -13,6 +12,7 @@
 <title>Registration Page</title>
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
 
 <%
 String name = request.getParameter("txtName");
@@ -32,13 +32,28 @@ ps.setString(1, name);
 ps.setString(2, email);
 ps.setString(3, password);
 
-db.executeUpdate(ps);
+int result = db.executeUpdate(ps);
 
 db.closeConnection();
 		
 //out.print("name is " + name + ", email is " + email + ", password is " + password);
-
+if(result > 0){
+	//the query succeeded
 %>
+
+<h3>Thank you for registering</h3>
+
+<%
+}else{
+	//the query failed
+%>
+
+<h3>Sorry! Registration has failed</h3>
+
+<% 
+}
+%>
+
 
 </body>
 </html>
