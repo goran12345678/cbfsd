@@ -1,0 +1,70 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>Archetype Created Web Application</display-name>
+	<servlet>
+		<servlet-name>EditStudent</servlet-name>
+		<display-name>EditStudent</display-name>
+		<description>Create, Delete, Edit Student</description>
+		<servlet-class>com.zumbapro.controller.EditStudent</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetStudent</servlet-name>
+		<display-name>GetStudent</display-name>
+		<description>Fetch student</description>
+		<servlet-class>com.zumbapro.controller.GetStudent</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>EditBatch</servlet-name>
+		<display-name>EditBatch</display-name>
+		<description>Create, Edit, Delete Batch</description>
+		<servlet-class>com.zumbapro.controller.EditBatch</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetBatch</servlet-name>
+		<display-name>GetBatch</display-name>
+		<description>Fetch batch</description>
+		<servlet-class>com.zumbapro.controller.GetBatch</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<display-name>Login</display-name>
+		<description>authentication</description>
+		<servlet-class>com.zumbapro.controller.Login</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Register</servlet-name>
+		<display-name>Register</display-name>
+		<description>new account</description>
+		<servlet-class>com.zumbapro.controller.Register</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditStudent</servlet-name>
+		<url-pattern>/EditStudent</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetStudent</servlet-name>
+		<url-pattern>/GetStudent</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>EditBatch</servlet-name>
+		<url-pattern>/EditBatch</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetBatch</servlet-name>
+		<url-pattern>/GetBatch</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Register</servlet-name>
+		<url-pattern>/Register</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
