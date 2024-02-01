@@ -36,7 +36,30 @@ public class App
         
         //dbops.insertCustomer(customerList);
         
-        dbops.getAllCustomers();
+        //dbops.updateCustomer("ryan@gmail.com", "phone", "222-000-0000");
+        
+        //dbops.resetTemperatureToAll();
+        
+      ///dbops.updateCustomerDoc("ryan@gmail.com", "phone", "222-777-0000");
+        
+       // dbops.upsertCustomer("ryan@gmail.com", "age", "33");
+        
+        //dbops.upsertAllCustomerVersion();
+        
+        //dbops.deleteCustomer("gerry2@mail.com");
+        
+        //dbops.deleteCustomerWithAge();
+         
+        /*
+        List<Customer> customers = dbops.getAllCustomers();
+        for(Customer c: customers) {
+        	System.out.println(c);
+        }
+        */
+        
+       
+        dbops.deleteCollection("address");
+        
         
         /*String connection = "mongodb+srv://root:root@cluster0.wevapgs.mongodb.net/?retryWrites=true&w=majority";
         try {
