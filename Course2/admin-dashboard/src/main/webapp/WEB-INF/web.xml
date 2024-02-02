@@ -1,0 +1,117 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>EditStudentServlet</servlet-name>
+  	<display-name>EditStudentServlet</display-name>
+  	<description>feature to manage changes to Student object</description>
+  	<servlet-class>com.fullstack.service.controller.EditStudentServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>GetStudentServlet</servlet-name>
+  	<display-name>GetStudentServlet</display-name>
+  	<description>feature to get student/s</description>
+  	<servlet-class>com.fullstack.service.controller.GetStudentServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>EditBatchServlet</servlet-name>
+  	<display-name>EditBatchServlet</display-name>
+  	<description>feature to manage Batch information</description>
+  	<servlet-class>com.fullstack.service.controller.EditBatchServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>GetBatchServlet</servlet-name>
+  	<display-name>GetBatchServlet</display-name>
+  	<description>feature to get Batch</description>
+  	<servlet-class>com.fullstack.service.controller.GetBatchServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>EditScheduleServlet</servlet-name>
+  	<display-name>EditScheduleServlet</display-name>
+  	<description>feature to manage schedule changes</description>
+  	<servlet-class>com.fullstack.service.controller.EditScheduleServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>GetScheduleServlet</servlet-name>
+  	<display-name>GetScheduleServlet</display-name>
+  	<description>feature to get schedule</description>
+  	<servlet-class>com.fullstack.service.controller.GetScheduleServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ScheduleBatchServlet</servlet-name>
+  	<display-name>ScheduleBatchServlet</display-name>
+  	<description>feature to set point in time for batch</description>
+  	<servlet-class>com.fullstack.service.controller.ScheduleBatchServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AssignStudentToBatchServlet</servlet-name>
+  	<display-name>AssignStudentToBatchServlet</display-name>
+  	<description>feature enables assigning Student to Batch</description>
+  	<servlet-class>com.fullstack.service.controller.AssignStudentToBatchServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeleteBatchServlet</servlet-name>
+  	<display-name>DeleteBatchServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.fullstack.service.controller.DeleteBatchServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeleteScheduleServlet</servlet-name>
+  	<display-name>DeleteScheduleServlet</display-name>
+  	<description>feature to delete schedule</description>
+  	<servlet-class>com.fullstack.service.controller.DeleteScheduleServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeleteStudentServlet</servlet-name>
+  	<display-name>DeleteStudentServlet</display-name>
+  	<description>feature to delete a Student</description>
+  	<servlet-class>com.fullstack.service.controller.DeleteStudentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>EditStudentServlet</servlet-name>
+  	<url-pattern>/EditStudent</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>GetStudentServlet</servlet-name>
+  	<url-pattern>/GetStudent</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EditBatchServlet</servlet-name>
+  	<url-pattern>/EditBatch</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>GetBatchServlet</servlet-name>
+  	<url-pattern>/GetBatch</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EditScheduleServlet</servlet-name>
+  	<url-pattern>/EditSchedule</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>GetScheduleServlet</servlet-name>
+  	<url-pattern>/GetSchedule</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ScheduleBatchServlet</servlet-name>
+  	<url-pattern>/ScheduleBatch</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AssignStudentToBatchServlet</servlet-name>
+  	<url-pattern>/AssignStudentToBatch</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteBatchServlet</servlet-name>
+  	<url-pattern>/DeleteBatch</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteScheduleServlet</servlet-name>
+  	<url-pattern>/DeleteSchedule</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteStudentServlet</servlet-name>
+  	<url-pattern>/DeleteStudent</url-pattern>
+  </servlet-mapping>
+</web-app>
