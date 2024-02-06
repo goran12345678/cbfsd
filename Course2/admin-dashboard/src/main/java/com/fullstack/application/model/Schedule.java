@@ -1,6 +1,6 @@
 package com.fullstack.application.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 /*
  * Class represents a point in time committed to by the instructor. This class is reponsible for setting that point in time.

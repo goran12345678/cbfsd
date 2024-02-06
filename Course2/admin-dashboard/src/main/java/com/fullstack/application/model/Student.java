@@ -1,6 +1,6 @@
 package com.fullstack.application.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Student {
 	int id;

@@ -45,7 +45,14 @@ public class GetBatchServlet extends HttpServlet {
 			Batch batch = null;
 			
 			//Json Serialization
-			Helper.getJson(batch);
+			ObjectMapper om = new ObjectMapper();
+			String json = null;
+			try {
+				json = Helper.getJson(batch);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			writer.print(json);
 			
 		}else {
