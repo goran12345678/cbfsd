@@ -1,0 +1,38 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>RegistrationServlet</servlet-name>
+  	<display-name>RegistrationServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.fullstack.user.controller.RegistrationServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>GetScheduleServlet</servlet-name>
+  	<display-name>GetScheduleServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.fullstack.user.controller.GetScheduleServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>RequestSessionServlet</servlet-name>
+  	<display-name>RequestSessionServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.fullstack.user.controller.RequestSessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>RegistrationServlet</servlet-name>
+  	<url-pattern>/Registration</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>GetScheduleServlet</servlet-name>
+  	<url-pattern>/GetSchedule</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RequestSessionServlet</servlet-name>
+  	<url-pattern>/RequestSession</url-pattern>
+  </servlet-mapping>
+</web-app>
