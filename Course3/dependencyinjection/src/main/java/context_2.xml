@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="con1" class="com.fullstack.dependencyinjection.bean.Connection">
+		<!-- collaborators and configuration for this bean go here -->
+		<property name="url" value="jdbc:mysql://localhost/estore" />
+		<property name="user" value="test" />
+		<property name="password" value="test" />
+	</bean>
+
+	<bean id="con2" class="com.fullstack.dependencyinjection.bean.Connection">
+		<!-- collaborators and configuration for this bean go here -->
+				<property name="url" value="jdbc:mysql://localhost/eCommerce" />
+		<property name="user" value="sell" />
+		<property name="password" value="sell" />
+	</bean>
+
+	<!-- more bean definitions go here -->
+
+</beans>

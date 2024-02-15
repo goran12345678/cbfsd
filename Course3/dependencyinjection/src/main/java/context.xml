@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="aRef" class="com.fullstack.dependencyinjection.bean.Address">
+		<!-- collaborators and configuration for this bean go here -->
+		<property name="adrsLine" value="2112 Street A" />
+		<property name="city" value="Denver" />
+		<property name="state" value="CO" />
+		<property name="zipCode" value="12345" />
+	</bean>
+
+	<bean id="rRef" class="com.fullstack.dependencyinjection.bean.Restaurant">
+		<!-- collaborators and configuration for this bean go here -->
+		<property name="name" value="John's Cafe" />
+		<property name="phone" value="+1 234 444-99999" />
+		<property name="operatingHours" value="8AM - 5PM" />
+		<property name="ratings" value="4.5" />
+		<!-- <property name="address" ref="aRef" /> -->
+		<constructor-arg ref="aRef" />
+	</bean>
+
+	<!-- more bean definitions go here -->
+
+</beans>

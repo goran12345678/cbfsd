@@ -25,7 +25,20 @@ public class PromoCodes {
 		return (promoCodesWithDiscount.containsKey(promoCode)) ? promoCodesWithDiscount.get(promoCode) : 0; 
 	}
 	
-	public void getLongProcess() {
+	public void getLongProcess() throws InterruptedException {
 		//while(true);
+			Thread.sleep(15);
 	}
+	public boolean checkCode(String pcode) {
+		return promoCodes.contains(pcode);
+	}
+
+	public List<String> getPromoCodes() {
+		return promoCodes;
+	}
+
+	public TreeMap<String, Double> getPromoCodesWithDiscount() {
+		return promoCodesWithDiscount;
+	}
+
 }
