@@ -8,16 +8,17 @@
 		https://www.springframework.org/schema/context/spring-context.xsd
 		">
 
-<context:annotation-config />
+	<context:annotation-config />
 
-	<bean id="user" class="com.fullstack.dependencyinjection.bean.User">
+	<bean id="user"
+		class="com.fullstack.dependencyinjection.bean.User">
 		<property name="name" value="John" />
 		<property name="email" value="john@gmail.com" />
-		<property name="order" ref="order" />
+		<!-- <property name="order" ref="order" /> -->
 	</bean>
-	
-		<bean id="order" class="com.fullstack.dependencyinjection.bean.Order">
-		<property name="orderID" value="101" />
+
+	<bean id="order" class="com.fullstack.dependencyinjection.bean.Order">
+		<property name="orderId" value="101" />
 		<property name="dateTimeStamp" value="Feb 14th 202, 19:52" />
 		<property name="amount" value="2000" />
 	</bean>

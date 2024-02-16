@@ -12,10 +12,10 @@ public class User {
 		// TODO Auto-generated constructor stub
 		System.out.println("[User] - Object Created");
 	}
-	@Autowired
+	@Autowired 
 	public User(Order order) {
 		// TODO Auto-generated constructor stub
-		System.out.println("[User] - Object DI Created");
+		System.out.println("[User] - Object Constructor DI Created");
 		this.order = order;
 	}
 	public String getName() {
@@ -29,6 +29,13 @@ public class User {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public Order getOrder() {
+		return order;
+	}
+	//@Autowired //DI on setters
+	public void setOrder(Order order) {
+		this.order = order;
 	}
 	@Override
 	public String toString() {
