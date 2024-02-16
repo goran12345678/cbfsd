@@ -51,6 +51,14 @@ public class Product {
 			+ deliveryLocation + " on " + deliveryTime);
 		}
 	}
+	public void purchaseNow() {
+		System.out.println("[Product] - Purchasae Now....");
+		if(stock > 0) {
+			System.out.println("[Product] - Please initiate the transaction for amount of " + price);
+			System.out.println();
+			
+		}
+	}
 	
 	
 	@Override

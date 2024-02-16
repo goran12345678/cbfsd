@@ -3,6 +3,7 @@ package com.fullstack.aop;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.fullstack.aop.bean.Order;
 import com.fullstack.aop.bean.Product;
 
 /**
@@ -19,6 +20,10 @@ public class App
         System.out.println(product);
         System.out.println();
         
-        product.purchaseProduct("Home", "6 PM Evening", "john@gmail.com");
+        //product.purchaseProduct("Home", "6 PM Evening", "john@gmail.com");
+        //product.purchaseNow();
+        
+        Order order = context.getBean("order", Order.class);
+        order.submitOrder();
     }
 }
