@@ -1,0 +1,13 @@
+package com.fullstack.springwebmvcdemo;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class SpringbooteclispedemoApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
