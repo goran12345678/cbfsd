@@ -16,5 +16,4 @@ phases:
             - echo This is a Post Build Step. Build Completed `date`
 artifacts:
    files:
-      - target/jenkinsawsdemo-0.0.1-SNAPSHOT.jar
-										
+      - target/jenkinsawsdemo-0.0.1-SNAPSHOT.jar								
