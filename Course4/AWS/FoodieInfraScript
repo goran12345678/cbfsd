@@ -1,0 +1,16 @@
+aws ec2 create-vpc --cidr-block 10.0.0.0/24 --query Vpc.VpcId --output text #vpc-0b7cdc78cf19cbdd8
+aws ec2 create-subnet --vpc-id vpc-0b7cdc78cf19cbdd8 --cidr-block 10.0.0.0/24 --availability-zone us-east-2 --query Subnet.SubnetId #subnet-08efa137b744948e9
+aws ec2 create-internet-gateway --query InternetGateway.InternetGatewayId #igw-00056653e2ddcbb0b
+aws ec2 attach-internet-gateway --vpc-id vpc-0b7cdc78cf19cbdd8 --internet-gateway-id igw-00056653e2ddcbb0b
+aws ec2 create-route-table --vpc-id vpc-0b7cdc78cf19cbdd8 --query RouteTable.RouteTableId --output text #rtb-02b8531e399cc9605
+aws ec2 associate-route-table --route-table-id rtb-02b8531e399cc9605 --subnet-id subnet-08efa137b744948e9
+aws ec2 create-route --route-table-id rtb-02b8531e399cc9605 --destination-cidr-block 0.0.0.0/0 --gateway-id igw-00056653e2ddcbb0b
+
+aws ec2 create-security-group --group-name foodie-grp --description "Foodie App SG" --vpc-id vpc-0b7cdc78cf19cbdd8 #sg-06f0de112be9ba23d
+aws ec2 authorize-security-group-ingress --group-id sg-06f0de112be9ba23d --protocol tcp --port 80 --cidr 0.0.0.0/0
+aws ec2 authorize-security-group-ingress --group-id sg-06f0de112be9ba23d --protocol tcp --port 22 --cidr 0.0.0.0/0
+
+
+aws ec2 create-key-pair --key-name foodieapp --query 'KeyMaterial' --output text > foodiekey.pem
+aws ec2 run-instances --image-id ami-09b90e09742640522 --count 1 --instance-type t2.micro --key-name foodieapp --security-group-ids sg-06f0de112be9ba23d --subnet-id subnet-08efa137b744948e9 --associate-public-ip-address #i-0218efdbf93d17d34
+
