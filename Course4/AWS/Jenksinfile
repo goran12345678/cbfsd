@@ -1,0 +1,29 @@
+pipeline{
+    agent any
+    stages{
+        stage('GitDownload'){
+            steps{
+                sh 'git clone https://github.com/goran12345678/cbfsd.git'
+            }
+        }
+        stage('Build'){
+            steps{
+                dir('./cbfsd/Course4/container-demo'){
+                  sh 'mvn package ./'
+                }
+                archiveArtifacdts artifacts: '**/target/*.jar', fingerprint: true
+            }
+        }
+        stage('BuildDocker'){
+            steps{
+                dir('./cbfsd/Course4/container-demo'){
+                sh 'sudo -S docker build -t petclinic/petclinic:1.0 ./'
+                sh 'sudo -S docker container stop petclinic || true'
+                sh 'sudo -S docker container rm petclinic || true'
+                sh 'sudo -S docker run -d -p 9090:9090 --name petclinic  petclinic/petclinic:1.0'
+                }
+            }
+        
+        }
+    }
+}
